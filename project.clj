@@ -1,4 +1,4 @@
-(defproject cc.qbits/fn "1.0.0-alpha2"
+(defproject cc.qbits/fn "1.0.0-alpha3-SNAPSHOT"
   :url "https://github.com/mpenet/fn"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
