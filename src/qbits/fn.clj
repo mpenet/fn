@@ -14,7 +14,10 @@
   (reify Supplier
     (get [_] (f))))
 
-(defmacro supplier [& args] `(supplier* (fn ~@args)))
+(defmacro supplier
+  {:style/indent 1}
+  [& args]
+  `(supplier* (fn ~@args)))
 
 (defn function*
   ^Function
@@ -22,7 +25,10 @@
   (reify Function
     (apply [_ x] (f x))))
 
-(defmacro function [& args] `(function* (fn ~@args)))
+(defmacro function
+  {:style/indent 1}
+  [& args]
+  `(function* (fn ~@args)))
 
 (defn bifunction*
   ^BiFunction
@@ -31,7 +37,10 @@
     (apply [_ x y]
       (f x y))))
 
-(defmacro bifunction [& args] `(bifunction* (fn ~@args)))
+(defmacro bifunction
+  {:style/indent 1}
+  [& args]
+  `(bifunction* (fn ~@args)))
 
 (defn consumer*
   ^Consumer
@@ -39,7 +48,10 @@
   (reify Consumer
     (accept [_ x] (f x))))
 
-(defmacro consumer [& args] `(consumer* (fn ~@args)))
+(defmacro consumer
+  {:style/indent 1}
+  [& args]
+  `(consumer* (fn ~@args)))
 
 (defn biconsumer*
   ^BiConsumer
@@ -48,7 +60,9 @@
     (accept [_ x y]
       (f x y))))
 
-(defmacro biconsumer [& args] `(biconsumer* (fn ~@args)))
+(defmacro biconsumer
+  {:style/indent 1}
+  [& args] `(biconsumer* (fn ~@args)))
 
 (defn long-consumer*
   ^LongConsumer
@@ -56,7 +70,9 @@
   (reify LongConsumer
     (accept [_ x] (f x))))
 
-(defmacro long-consumer [& args] `(long-consumer* (fn ~@args)))
+(defmacro long-consumer
+  {:style/indent 1}
+  [& args] `(long-consumer* (fn ~@args)))
 
 (defn double-consumer*
   ^DoubleConsumer
@@ -64,7 +80,9 @@
   (reify DoubleConsumer
     (accept [_ x] (f x))))
 
-(defmacro double-consumer [& args] `(double-consumer* (fn ~@args)))
+(defmacro double-consumer
+  {:style/indent 1}
+  [& args] `(double-consumer* (fn ~@args)))
 
 (defn runnable*
   ^Runnable
@@ -72,4 +90,6 @@
   (reify Runnable
     (run [_] (f))))
 
-(defmacro runnable [& args] `(runnable* (fn ~@args)))
+(defmacro runnable
+  {:style/indent 1}
+  [& args] `(runnable* (fn ~@args)))
