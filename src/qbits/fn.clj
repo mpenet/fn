@@ -15,7 +15,7 @@
     (get [_] (f))))
 
 (defmacro supplier
-  {:style/indent 1}
+  {:style/indent 0}
   [& args]
   `(supplier* (fn ~@args)))
 
@@ -26,7 +26,7 @@
     (apply [_ x] (f x))))
 
 (defmacro function
-  {:style/indent 1}
+  {:style/indent 0}
   [& args]
   `(function* (fn ~@args)))
 
@@ -38,7 +38,7 @@
       (f x y))))
 
 (defmacro bifunction
-  {:style/indent 1}
+  {:style/indent 0}
   [& args]
   `(bifunction* (fn ~@args)))
 
@@ -49,7 +49,7 @@
     (accept [_ x] (f x))))
 
 (defmacro consumer
-  {:style/indent 1}
+  {:style/indent 0}
   [& args]
   `(consumer* (fn ~@args)))
 
@@ -61,7 +61,7 @@
       (f x y))))
 
 (defmacro biconsumer
-  {:style/indent 1}
+  {:style/indent 0}
   [& args] `(biconsumer* (fn ~@args)))
 
 (defn long-consumer*
@@ -71,7 +71,7 @@
     (accept [_ x] (f x))))
 
 (defmacro long-consumer
-  {:style/indent 1}
+  {:style/indent 0}
   [& args] `(long-consumer* (fn ~@args)))
 
 (defn double-consumer*
@@ -81,7 +81,7 @@
     (accept [_ x] (f x))))
 
 (defmacro double-consumer
-  {:style/indent 1}
+  {:style/indent 0}
   [& args] `(double-consumer* (fn ~@args)))
 
 (defn runnable*
@@ -91,5 +91,5 @@
     (run [_] (f))))
 
 (defmacro runnable
-  {:style/indent 1}
+  {:style/indent 0}
   [& args] `(runnable* (fn ~@args)))
